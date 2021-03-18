@@ -1,0 +1,15 @@
+<h1>Creer un nouveau Cocktail</h1>
+
+<form>
+  <div class="form-group">
+
+    <div class="col-md-6 mb-3">
+      <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :name, label: "Cocktail name:" %>
+        <%= f.submit class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+    <%= link_to "See all Cocktails", cocktails_path %>
+  </div>
+</form>
+

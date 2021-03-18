@@ -21,6 +21,8 @@ require 'open-uri'
 
 # *****************************************************************
 
+puts "*****************************************************************"
+
 puts "Cleaning database..."
 Ingredient.destroy_all
 
@@ -41,7 +43,7 @@ end
 
 puts "Finished!"
 
-# *****************************************************************
+puts "*****************************************************************"
 
 puts "Cleaning database..."
 Cocktail.destroy_all
@@ -52,3 +54,16 @@ Cocktail.create(name: "Mojito")
 Cocktail.create(name: "Indien")
 
 puts "Finished!"
+
+puts "*****************************************************************"
+
+# puts "Cleaning database..."
+# Doses.destroy_all
+
+# puts "Creating Dosess..."
+# Doses.create(name: "Le Grand Schtroumpf")
+# Doses.create(name: "Mojito")
+# Doses.create(name: "Indien")
+
+# puts "Finished!"
+
