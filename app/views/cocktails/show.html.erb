@@ -1,6 +1,6 @@
 <div class="container">
   <div class="new-cocktail">
-    <h1><%= @cocktail.name %></h1>
+    <h1 class="show-title"><%= @cocktail.name %></h1>
     <%= link_to "Back to all cocktails", cocktails_path %>
 
     <div class="row">
@@ -23,6 +23,11 @@
                 <% end %>
               </td>
             </tr>
+            <% end %>
+            <% if @cocktail.photo.attached? %>
+            <div class="cocktail-show-pic">
+            <%= cl_image_tag @cocktail.photo.key, height: 300, width: 520, crop: :fill %>
+            </div>
             <% end %>
           </tbody>
         </table>
