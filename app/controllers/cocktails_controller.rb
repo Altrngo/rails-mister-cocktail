@@ -11,7 +11,6 @@ class CocktailsController < ApplicationController
   def create
     @cocktail = Cocktail.new(cocktail_params)
     if @cocktail.save
-      @cocktail.photo = @cocktail.photo.blob
       redirect_to cocktail_path(@cocktail)
     else
       render "new"
@@ -22,6 +21,13 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.find(params[:id])
     @dose = Dose.new
   end
+
+  def destroy
+    @cocktail = Cocktail.find(params[:id])
+    @cocktail.destroy
+    redirect_to cocktails_path
+  end
+
 
   private
 
