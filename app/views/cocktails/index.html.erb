@@ -14,13 +14,15 @@
 <h2 class="cocktail-index-title">Our customer's creation</h2>
 <div class="cocktail-container">
   <% @cocktails.each do |cocktail| %>
-  <% if cocktail.photo.attached? %>
-  <div class="card"
-    style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key, height: 240, crop: :fill %>')">
-    <% else %>
-    <div class="card">
-      <h2 class="cocktail-tittle"><%= link_to "#{cocktail.name}", cocktail_path(cocktail), class: 'card-link' %></h2>
+    <% if cocktail.photo.attached? %>
+      <div class="card-wpic"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key, height: 200, width: 300, crop: :fill %>')">
+        <h2 class="cocktail-title"><%= link_to "#{cocktail.name}", cocktail_path(cocktail), class: 'card-link' %></h2>
+      <% else %>
+        <div class="card">
+          <h2 class="cocktail-title"><%= link_to "#{cocktail.name}", cocktail_path(cocktail), class: 'card-link'  %></h2>
       <% end %>
+
       <%= link_to cocktail_path(cocktail), method: :delete,
         data: { confirm: "Are you sure?"}, class: "cocktail-delete" do %>
       <i class="fas fa-trash"></i>
