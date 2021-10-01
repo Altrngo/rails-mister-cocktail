@@ -23,10 +23,10 @@
           <h2 class="cocktail-title"><%= link_to "#{cocktail.name}", cocktail_path(cocktail), class: 'card-link'  %></h2>
       <% end %>
 
-      <%= link_to cocktail_path(cocktail), method: :delete,
-        data: { confirm: "Are you sure?"}, class: "cocktail-delete" do %>
-      <i class="fas fa-trash"></i>
+      <%# <%= link_to cocktail_path(cocktail), method: :delete, %>
+        <%# data: { confirm: "Are you sure?"}, class: "cocktail-delete" do %>
+      <%# <i class="fas fa-trash"></i> %>
     </div>
-    <% end %>
+    <%# <% end %> %>
     <% end %>
   </div>
