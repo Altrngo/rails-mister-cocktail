@@ -48,10 +48,10 @@ puts "*****************************************************************"
 puts "Cleaning database..."
 Cocktail.destroy_all
 
-puts "Creating Cocktails..."
-Cocktail.create(name: "Le Grand Schtroumpf")
-Cocktail.create(name: "Mojito")
-Cocktail.create(name: "Indien")
+# puts "Creating Cocktails..."
+# Cocktail.create(name: "Le Grand Schtroumpf")
+# Cocktail.create(name: "Mojito")
+# Cocktail.create(name: "Indien")
 
 puts "Finished!"
 
